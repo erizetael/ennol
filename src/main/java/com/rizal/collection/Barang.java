@@ -2,7 +2,7 @@ package com.rizal.collection;
 
 import org.bson.types.ObjectId;
 
-public class Barang {
+public final class Barang {
     private ObjectId id;
     private String nama;
     private Double harga;

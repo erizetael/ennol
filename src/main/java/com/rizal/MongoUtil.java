@@ -26,7 +26,7 @@ public class MongoUtil {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClient.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
-        MongoDatabase mongoDatabase = mongoClient.getDatabase(dbName).withCodecRegistry(pojoCodecRegistry);;
+        MongoDatabase mongoDatabase = mongoClient.getDatabase(dbName).withCodecRegistry(pojoCodecRegistry);
 
         MongoCollection<Barang> collection = mongoDatabase.getCollection("barang", Barang.class);
 //        Barang ada = new Barang();
@@ -58,9 +58,6 @@ public class MongoUtil {
 
         System.out.println("");
         mongoClient.close();
-
-
-
 
     }
 }

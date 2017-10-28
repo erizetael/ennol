@@ -23,6 +23,12 @@ public class Cafe {
     public VBox showTableCafe() {
         tableBox = new VBox();
         TableView tabel = new TableView();
+        colNama = new TableColumn("Nama");
+        colHarga = new TableColumn("Harga");
+        colMasuk = new TableColumn("Masuk");
+        colKeluar = new TableColumn("Keluar");
+        colSisa = new TableColumn("Sisa");
+        tabel.getColumns().addAll(colNama, colHarga, colMasuk,colKeluar,colSisa);
 
 
         txtNama.setPromptText("Nama");

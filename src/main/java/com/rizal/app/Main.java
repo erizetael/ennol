@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.sql.SQLException;
 
 public class Main extends Application{
+    private MongoUtil mongoUtil;
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -16,8 +17,10 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception, SQLException {
 
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.showMain();
+//        MainMenu mainMenu = new MainMenu();
+//        mainMenu.showMain();
+        mongoUtil = new MongoUtil();
+        mongoUtil.connect();
 
     }
 }
